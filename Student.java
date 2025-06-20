@@ -1,17 +1,6 @@
 import java.sql.Date;
 
 public class Student {
-    String fullName;
-    String password;
-    String studentID;
-    String classAndYear;
-    char gender;
-    String email;
-    String phoneNumber;
-    String task;
-    Date endDate;
-    String skillAndExperience;
-    int taskPoint;
     
     public String fullName;
     private String password;
@@ -116,6 +105,7 @@ public class Student {
         this.taskPoint = taskPoint;
     }
 
+    // constructor for student
     public Student(String fullName, String password, String studentID, String classAndYear, char gender, String email,
             String phoneNumber, String task, Date endDate, String skillAndExperience, int taskPoint) {
         this.fullName = fullName;
@@ -130,6 +120,13 @@ public class Student {
         this.skillAndExperience = skillAndExperience;
         this.taskPoint = taskPoint;
     }
+
+    // overload constructor
+    public Student(String fullName, String studentID) {
+    this.fullName = fullName;
+    this.studentID = studentID;
+    }
+
     
     public static void isValidEmail() {
     

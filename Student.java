@@ -1,4 +1,5 @@
 import java.sql.Date;
+import java.util.ArrayList;
 
 public class Student {
     
@@ -13,6 +14,10 @@ public class Student {
     public Date endDate;
     private String skillAndExperience;
     private int taskPoint;
+
+
+    // collection 
+    private ArrayList<String> tasks = new ArrayList<>();
 
 
     // Getters & Setters 
@@ -105,6 +110,7 @@ public class Student {
         this.taskPoint = taskPoint;
     }
 
+    
     // constructor for student
     public Student(String fullName, String password, String studentID, String classAndYear, char gender, String email,
             String phoneNumber, String task, Date endDate, String skillAndExperience, int taskPoint) {
@@ -135,6 +141,9 @@ public class Student {
     private static void isValidPhoneNumber(){
 
     }
+
+    
+
 
 }
 

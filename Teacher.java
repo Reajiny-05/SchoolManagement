@@ -6,7 +6,7 @@ public class Teacher {
     private String email;
     private String password;
     private String phoneNumber;
-    private studentPortfolioID;
+    private String studentPortfolioID;
 
    //Getter and Setter
 

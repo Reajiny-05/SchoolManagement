@@ -1,11 +1,4 @@
 public class Teacher {
-    String fullName;
-    String teacherID;
-    String instituteName;
-    String email;
-    String password;
-    String phoneNumber;
-    String studentPortfolioID;
 
     public String fullName;
     private String teacherID;
@@ -87,11 +80,11 @@ public class Teacher {
     }
 
     
-    public static boolean isValidEmail() {
+    public static void isValidEmail() {
         
     }
 
-    public static boolean isValidPhoneNumber() {
+    private static void isValidPhoneNumber() {
         
     }
     

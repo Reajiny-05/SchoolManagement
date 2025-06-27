@@ -1,7 +1,12 @@
+//import com.sun.tools.javac.Main;
 import java.sql.Date;
-import java.util.ArrayList;
+import java.util.TreeSet;
+import javax.security.sasl.SaslClient;
 
 public class Student {
+    public Student() {
+
+    }
     
     public String fullName;
     private String password;
@@ -10,15 +15,50 @@ public class Student {
     private char gender;
     private String email;
     private String phoneNumber;
-    private String task;
+    private String taskName;
     public Date endDate;
     private String skillAndExperience;
     private int taskPoint;
 
 
     // collection 
-    private ArrayList<String> tasks = new ArrayList<>();
+    private TreeSet<String> tasks = new TreeSet<>();
+    private TreeSet<String> importantTasks = new TreeSet<>();
 
+ 
+    // constructor for student
+    public Student(String fullName, String password, String studentID, String classAndYear, char gender, String email,
+            String phoneNumber, String taskName, Date endDate, String skillAndExperience, int taskPoint) {
+        this.fullName = fullName;
+        this.password = password;
+        this.studentID = studentID;
+        this.classAndYear = classAndYear;
+        this.gender = gender;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.taskName = taskName;
+        this.endDate = endDate;
+        this.skillAndExperience = skillAndExperience;
+        this.taskPoint = taskPoint;
+    }
+
+    // overload constructor
+    public Student(String fullName, String studentID) {
+    this.fullName = fullName;
+    this.studentID = studentID;
+    }
+
+    public void addTask(String taskName) {
+
+    }
+
+    public static void isValidEmail() {
+    
+    }
+
+    private static void isValidPhoneNumber(){
+
+    }
 
     // Getters & Setters 
 
@@ -82,9 +122,7 @@ public class Student {
         return task;
     }
 
-    public void setTask(String task) {
-        this.task = task;
-    }
+
 
     public Date getEndDate() {
         return endDate;
@@ -102,50 +140,16 @@ public class Student {
         this.skillAndExperience = skillAndExperience;
     }
 
-    public int getTaskPoint() {
-        return taskPoint;
-    }
-
-    public void setTaskPoint(int taskPoint) {
-        this.taskPoint = taskPoint;
-    }
-
-    
-    // constructor for student
-    public Student(String fullName, String password, String studentID, String classAndYear, char gender, String email,
-            String phoneNumber, String task, Date endDate, String skillAndExperience, int taskPoint) {
-        this.fullName = fullName;
-        this.password = password;
-        this.studentID = studentID;
-        this.classAndYear = classAndYear;
-        this.gender = gender;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.task = task;
-        this.endDate = endDate;
-        this.skillAndExperience = skillAndExperience;
-        this.taskPoint = taskPoint;
-    }
-
-    // overload constructor
-    public Student(String fullName, String studentID) {
-    this.fullName = fullName;
-    this.studentID = studentID;
-    }
-
-    
-    public static void isValidEmail() {
-    
-    }
-
-    private static void isValidPhoneNumber(){
-
-    }
-
-    
-
-
 }
+
+/*
+    public static void main(String[] args) {
+        Student s = new Student(null,null);
+        s.setTaskPoint(10000);
+    }
+*/
+
+
 
 
 

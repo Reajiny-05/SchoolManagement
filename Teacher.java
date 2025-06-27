@@ -8,6 +8,31 @@ public class Teacher {
     private String phoneNumber;
     private String studentPortfolioID;
 
+   // constructor
+    public Teacher(String fullName, String teacherID, String instituteName, String email, String password,
+            String phoneNumber, String studentPortfolioID) {
+        this.fullName = fullName;
+        this.teacherID = teacherID;
+        this.instituteName = instituteName;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.studentPortfolioID = studentPortfolioID;
+    }
+
+    // function to view sutdent portfolio
+    public void viewStudentPortfolio(Student s){
+        
+    }
+    
+    public static void isValidEmail() {
+        
+    }
+
+    private static void isValidPhoneNumber() {
+        
+    }
+    
    //Getter and Setter
 
     public String getFullName() {
@@ -67,26 +92,7 @@ public class Teacher {
     }
 
     
-    public Teacher(String fullName, String teacherID, String instituteName, String email, String password,
-            String phoneNumber, String studentPortfolioID) {
-        this.fullName = fullName;
-        this.teacherID = teacherID;
-        this.instituteName = instituteName;
-        this.email = email;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-        
-        this.studentPortfolioID = studentPortfolioID;
-    }
 
-    
-    public static void isValidEmail() {
-        
-    }
-
-    private static void isValidPhoneNumber() {
-        
-    }
     
     
 }

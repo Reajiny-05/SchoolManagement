@@ -8,7 +8,7 @@ public class Student {
 
     }
     
-    public String fullName;
+    private String fullName;
     private String password;
     private String studentID;
     public String classAndYear;
@@ -16,7 +16,7 @@ public class Student {
     private String email;
     private String phoneNumber;
     private String taskName;
-    public Date endDate;
+    private Date endDate;
     private String skillAndExperience;
     private int taskPoint;
 

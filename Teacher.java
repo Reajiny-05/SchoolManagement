@@ -1,6 +1,10 @@
 public class Teacher {
 
-    public String fullName;
+    public Teacher() {
+
+    }
+
+    private String fullName;
     private String teacherID;
     private String instituteName;
     private String email;
@@ -20,9 +24,16 @@ public class Teacher {
         this.studentPortfolioID = studentPortfolioID;
     }
 
+    // overload constructor
+    public Teacher(String fullName, String password, String teacherID){
+        this.fullName = fullName;
+        this.password = password;
+        this.teacherID = teacherID;
+    }
+    
     // function to view sutdent portfolio
     public void viewStudentPortfolio(Student s){
-        
+
     }
     
     public static void isValidEmail() {

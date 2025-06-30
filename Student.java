@@ -7,12 +7,6 @@ public class Student {
     public Student() {
 
     }
-    // Never Gonna Give You Up
-    // Never Gonna Let You Down
-    // Never Gonna Run Around And Desert You
-    // Never Gonna Make You Cry
-    // Never Gonna Say Goodbye
-    // Never Gonna Tell A Lie And Hurt You
     
     private String fullName;
     private String password;

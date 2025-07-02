@@ -4,9 +4,9 @@ import java.util.TreeSet;
 import javax.security.sasl.SaslClient;
 
 public class Student {
-    public Student() {
+//     public Student() {
 
-    }
+//     }
     
     private String fullName;
     private String password;

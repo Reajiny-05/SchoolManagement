@@ -9,6 +9,7 @@ public class Task {
     Date deadline;
     Boolean importance_status;
     
+    //contructor 
     public Task(int taskID, String taskName, int workPoint, String progress, Date deadline, Boolean importance_status) {
         this.taskID = taskID;
         this.taskName = taskName;

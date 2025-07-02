@@ -10,7 +10,8 @@ public class studentPortfolio {
     String skills;
     String language;
     String experience;
-
+ 
+    // constuctor 
     public studentPortfolio(int portfolioID, String background, String skills, String language, String experience) {
         this.portfolioID = portfolioID;
         this.background = background;

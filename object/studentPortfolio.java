@@ -4,6 +4,11 @@
  */
 
 
-class studentPortfolioID {
-
+public class studentPortfolio {
+    int portfolioID;
+    String background;
+    String skills;
+    String language;
+    String experience;
+    
 }

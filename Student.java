@@ -4,14 +4,14 @@ import java.util.TreeSet;
 import javax.security.sasl.SaslClient;
 
 public class Student {
-    public Student() {
+    /*public Student() {
 
-    }
+    }*/
     
     private String fullName;
     private String password;
     private String studentID;
-    public String classAndYear;
+    private String classAndYear;
     private char gender;
     private String email;
     private String phoneNumber;
@@ -37,7 +37,6 @@ public class Student {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.taskName = taskName;
-        this.endDate = endDate;
         this.skillAndExperience = skillAndExperience;
         this.taskPoint = taskPoint;
     }
@@ -66,9 +65,6 @@ public class Student {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
 
     public String getPassword() {
         return password;
@@ -78,13 +74,11 @@ public class Student {
         this.password = password;
     }
 
+
     public String getStudentID() {
         return studentID;
     }
 
-    public void setStudentID(String studentID) {
-        this.studentID = studentID;
-    }
 
     public String getClassAndYear() {
         return classAndYear;
@@ -94,13 +88,11 @@ public class Student {
         this.classAndYear = classAndYear;
     }
 
+
     public char getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
-        this.gender = gender;
-    }
 
     public String getEmail() {
         return email;
@@ -110,6 +102,7 @@ public class Student {
         this.email = email;
     }
 
+
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -118,19 +111,11 @@ public class Student {
         this.phoneNumber = phoneNumber;
     }
 
+
     public String getTask() {
         return task;
     }
 
-
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
 
     public String getSkillAndExperience() {
         return skillAndExperience;

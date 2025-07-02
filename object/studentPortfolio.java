@@ -5,11 +5,11 @@
 
 
 public class studentPortfolio {
-    int portfolioID;
-    String background;
-    String skills;
-    String language;
-    String experience;
+    private int portfolioID;
+    private String background;
+    private String skills;
+    private String language;
+    private String experience;
  
     // constuctor 
     public studentPortfolio(int portfolioID, String background, String skills, String language, String experience) {

@@ -1,12 +1,12 @@
 public class Student1 {
 
-    int studentID;
-    String email;
-    String password;
-    String username;
-    String phoneNumber;
-    int totalWorkPoint = 0;
-    String institude;
+    private int studentID;
+    private String email;
+    private String password;
+    private String username;
+    private String phoneNumber;
+    private int totalWorkPoint = 0;
+    private String institude;
     
     // Constuctor 
     public Student1(int studentID, String email, String password, String username, String phoneNumber,

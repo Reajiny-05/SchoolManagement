@@ -1,10 +1,10 @@
 public class Teacher1 {
-    int teacherID;
-    String email;
-    String password;
-    String username;
-    String phoneNumber;
-    String institude;
+    private int teacherID;
+    private String email;
+    private String password;
+    private String username;
+    private String phoneNumber;
+    private String institude;
     
     // constuctor
     public Teacher1(int teacherID, String email, String password, String username, String phoneNumber,

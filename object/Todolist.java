@@ -1,6 +1,6 @@
 public class Todolist {
-    int todoID;
-    Boolean bin;
+    private int todoID;
+    private Boolean bin;
     
     public Todolist(int todoID, Boolean bin) {
         this.todoID = todoID;

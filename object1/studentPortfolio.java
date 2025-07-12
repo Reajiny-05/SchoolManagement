@@ -1,3 +1,4 @@
+package object1;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -20,6 +21,32 @@ public class studentPortfolio {
         this.experience = experience;
     }
 
-    
+    public int getPortfolioID() {
+        return portfolioID;
+    }
+
+    public void setPortfolioID(int portfolioID) {
+        this.portfolioID = portfolioID;
+    }
+
+    public String getBackground() {
+        return background;
+    }
+
+    public void setBackground(String background) {
+        this.background = background;
+    }
+
+    public String getSkills() {
+        return skills;
+    }
+
+    public void setSkills(String skills) {
+        this.skills = skills;
+    }
+
+    public String getLanguage() {
+        return language;
+    } 
     
 }

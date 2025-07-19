@@ -1,10 +1,10 @@
 package object1;
 
-public class Teacher1 extends User{
+public class Teachers extends User{
     private int score = 0;
 
     // Full constructor
-    public Teacher1(int userID, String email, String password, String username, String phoneNumber,
+    public Teachers(int userID, String email, String password, String username, String phoneNumber,
             String institude, int score) {
         super(userID, email, password, username, phoneNumber, institude);
         this.score = score;
@@ -12,8 +12,18 @@ public class Teacher1 extends User{
 
 
     // Overloaded constructor
-    public Teacher1(String username, String password) {
+    public Teachers(String username, String password) {
         super(username, password);
+    }
+
+    // Method to display teacher information
+    public String displayUserInfo() {
+
+    }
+
+    // Method to login as a teacher
+    public boolean login(String username, String password) {
+        return super.login(username, password);
     }
 
     // Getter for score

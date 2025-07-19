@@ -2,12 +2,12 @@ package object1;
 
 public class User {
 
-    private int userID;
-    private String email;
-    private String password;
-    private String username;
-    private String phoneNumber;
-    private String institude;
+    protected int userID;
+    protected String email;
+    protected String password;
+    protected String username;
+    protected String phoneNumber;
+    protected String institude;
 
     // Constructor
     public User(int userID, String email, String password, String username, String phoneNumber,
@@ -15,7 +15,7 @@ public class User {
         this.userID = userID;
         this.email = email;
         this.password = password;
-        this.username = username;
+        this.username = username;   
         this.phoneNumber = phoneNumber;
         this.institude = institude;
     }
@@ -24,6 +24,18 @@ public class User {
     public User(String password, String username) {
         this.password = password;
         this.username = username;
+    }
+
+    //display user information
+    public String displayUserInfo() {
+        return "Email: " + email + "\n" +
+               "Username: " + username + "\n" +
+               "Institude: " + institude;
+    }
+
+    //simple login check
+    public boolean login(String username, String password) {
+        return this.username.equals(username) && this.password.equals(password);
     }
 
     public String getEmail() {
@@ -39,7 +51,13 @@ public class User {
     }
 
     protected void setPassword(String password) {
-        this.password = password;
+        if (password.length() < 6){
+            System.out.println("Password too short");
+        }
+        else {
+            this.password = password;
+        }
+        
     }
 
     public String getUsername() {
@@ -65,6 +83,12 @@ public class User {
     protected int getUserID() {
         return userID;
     }
+
+    @Override
+    public String toString() {
+        return "User [email=" + email + ", username=" + username + ", institude=" + institude + "]";
+    }
+
 
     
 }

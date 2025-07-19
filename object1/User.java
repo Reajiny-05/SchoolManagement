@@ -2,12 +2,12 @@ package object1;
 
 public class User {
 
-    private int userID;
-    private String email;
-    private String password;
-    private String username;
-    private String phoneNumber;
-    private String institude;
+    protected int userID;
+    protected String email;
+    protected String password;
+    protected String username;
+    protected String phoneNumber;
+    protected String institude;
 
     // Constructor
     public User(int userID, String email, String password, String username, String phoneNumber,
@@ -15,7 +15,7 @@ public class User {
         this.userID = userID;
         this.email = email;
         this.password = password;
-        this.username = username;
+        this.username = username;   
         this.phoneNumber = phoneNumber;
         this.institude = institude;
     }

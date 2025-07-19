@@ -15,25 +15,17 @@ public class Teachers extends User{
         super(username, password);
     }
 
-    // Getter for score
-    public int getScore() {
-        return score;
+     // Method to grade a student
+    public void gradeStudent(Students student, int score) {
+        student.setTotalWorkPoint(score); // Or add to it if needed
+        System.out.println("Graded student " + student.getUsername() + " with score " + score);
     }
 
-    // Setter for score
-    protected void setScore(int score) {
-    if (score < 0 || score > 10) {
-        System.out.println("Score must be between 0–10.");
-        this.score = 0;
-    } else {
-        this.score = score;
-    }
-}
 
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.toString() + ", Teacher";
     }
     
     

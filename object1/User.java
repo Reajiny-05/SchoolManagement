@@ -26,6 +26,18 @@ public class User {
         this.username = username;
     }
 
+    //display user information
+    public String displayUserInfo() {
+        return "Email: " + email + "\n" +
+               "Username: " + username + "\n" +
+               "Institude: " + institude;
+    }
+
+    //simple login check
+    public boolean login(String username, String password) {
+        return this.username.equals(username) && this.password.equals(password);
+    }
+
     public String getEmail() {
         return email;
     }
@@ -64,6 +76,11 @@ public class User {
 
     protected int getUserID() {
         return userID;
+    }
+
+    @Override
+    public String toString() {
+        return "User [email=" + email + ", username=" + username + ", institude=" + institude + "]";
     }
 
     

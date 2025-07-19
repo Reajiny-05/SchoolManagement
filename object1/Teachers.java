@@ -27,6 +27,11 @@ public class Teachers extends User{
     public String toString() {
         return super.toString() + ", Teacher";
     }
+
+    @Override
+    public String displayUserInfo() {
+        return super.displayUserInfo() + " Teacher";
+    }
     
     
 }

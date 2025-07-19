@@ -30,9 +30,16 @@ public class Students extends User{
 
     @Override
     public String toString() {
-        return super.toString() + ", Students [totalWorkPoint=" + totalWorkPoint + "]";
+        return super.toString() + ", Students [totalWorkPoint = " + totalWorkPoint + "]";
+    }
+
+    @Override
+    public String displayUserInfo() {
+        return super.displayUserInfo() + ", totalWorkPoint = " + totalWorkPoint;
     }
 
 
+
+   
 }
 

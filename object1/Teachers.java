@@ -16,16 +16,6 @@ public class Teachers extends User{
         super(username, password);
     }
 
-    // Method to display teacher information
-    public String displayUserInfo() {
-
-    }
-
-    // Method to login as a teacher
-    public boolean login(String username, String password) {
-        return super.login(username, password);
-    }
-
     // Getter for score
     public int getScore() {
         return score;

@@ -15,7 +15,7 @@ public class User {
         this.userID = userID;
         this.email = email;
         this.password = password;
-        this.username = username;
+        this.username = username;   
         this.phoneNumber = phoneNumber;
         this.institude = institude;
     }

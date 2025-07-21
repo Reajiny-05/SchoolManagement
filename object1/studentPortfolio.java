@@ -15,7 +15,26 @@ public class studentPortfolio {
         this.portfolioName = portfolioName;
         this.skills = skills;
     }
+
+        //setter and getter
+    protected String getPortfolioName() {
+        return portfolioName;
+    }
+
+    protected String getSkills() {
+        return skills;
+    }
+
+    protected void setPortfolioName(String portfolioName) {
+        this.portfolioName = portfolioName;
+    }
+
+    protected void setSkills(String skills) {
+        this.skills = skills;
+    }
+    
     
 
+    
     
 }

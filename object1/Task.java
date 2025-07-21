@@ -20,10 +20,20 @@ public class Task {
         this.importance_status = importance_status;
     }
 
-    //static method to return the number of tasks
+    //setter and getter for score for teacher to marks
     public static int getTaskCount() {
     return taskCount;
     }
+
+    public int getScore() {
+        return score;
+    }
+
+    //static method to return the number of tasks
+    public void setScore(int score) {
+        this.score = score;
+    }
+
 
     //static method to make sure that there is a name for the task
     public static boolean isValidTaskName(String name) {

@@ -2,13 +2,13 @@ package object1;
 import java.sql.Date;
 
 public class Task {
-    private int taskID;
-    private String taskName;
-    private String deadline;
-    private int score;
-    private String progress;
+    protected int taskID;
+    protected String taskName;
+    protected String deadline;
+    protected int score;
+    protected String progress;
 
-    private static int taskCount = 0; // Static variable to count the total tasks made by one student
+    protected static int taskCount = 0; // Static variable to count the total tasks made by one student
 
     //contructor 
     public Task(int taskID, String taskName, int workPoint, String progress, Date deadline, Boolean importance_status) {

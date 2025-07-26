@@ -6,47 +6,35 @@ package object1;
 
 
 public class studentPortfolio {
-    private int portfolioID;
-    private String background;
+    protected int portfolioID;
+    protected String portfolioName;
     private String skills;
-    private String language;
-    private String experience;
- 
-    // constuctor 
-    public studentPortfolio(int portfolioID, String background, String skills, String language, String experience) {
-        this.portfolioID = portfolioID;
-        this.background = background;
+
+    //constructor
+    public studentPortfolio(String portfolioName, String skills) {
+        this.portfolioName = portfolioName;
         this.skills = skills;
-        this.language = language;
-        this.experience = experience;
     }
 
-    public int getPortfolioID() {
-        return portfolioID;
+        //setter and getter
+    protected String getPortfolioName() {
+        return portfolioName;
     }
 
-    public void setPortfolioID(int portfolioID) {
-        this.portfolioID = portfolioID;
-    }
-
-    public String getBackground() {
-        return background;
-    }
-
-    public void setBackground(String background) {
-        this.background = background;
-    }
-
-    public String getSkills() {
+    protected String getSkills() {
         return skills;
     }
 
-    public void setSkills(String skills) {
-        this.skills = skills;
+    protected void setPortfolioName(String portfolioName) {
+        this.portfolioName = portfolioName;
     }
 
-    public String getLanguage() {
-        return language;
-    } 
+    protected void setSkills(String skills) {
+        this.skills = skills;
+    }
+    
+    
+
+    
     
 }

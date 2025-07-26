@@ -50,7 +50,7 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
+    protected String getPassword() {
         return password;
     }
 
@@ -76,7 +76,7 @@ public class User {
         this.username = username;
     }
 
-    public String getPhoneNumber() {
+    protected String getPhoneNumber() {
         return phoneNumber;
     }
 

@@ -3,12 +3,21 @@ package object1;
 
 public class Students extends User{
     private int totalWorkPoint = 0;
+    private String classAndYear = "";
 
-    //constructor
-    public Students(int userID, String email, String password, String username, String phoneNumber,
-            String institude, int totalWorkPoint) {
+    //constructor taken from user (parent)
+    public Students(int userID, String email, String password, String username, String phoneNumber, String institude,
+            int totalWorkPoint, String classAndYear) {
         super(userID, email, password, username, phoneNumber, institude);
-        this.setTotalWorkPoint(totalWorkPoint);
+        this.totalWorkPoint = totalWorkPoint;
+        this.classAndYear = classAndYear;
+    }
+
+    //constructor for this class (subclass)
+    public Students(String password, String username, int totalWorkPoint, String classAndYear) {
+        super(password, username);
+        this.totalWorkPoint = totalWorkPoint;
+        this.classAndYear = classAndYear;
     }
 
     //overloaded constructor
@@ -16,6 +25,10 @@ public class Students extends User{
         super(password, username);
     }
 
+    //setter and getter for total work point
+    public int getTotalWorkPoint() {
+        return totalWorkPoint;
+    }
 
     protected void setTotalWorkPoint(int totalWorkPoint) {
         if (totalWorkPoint < 0) {
@@ -26,16 +39,33 @@ public class Students extends User{
         }
     }
 
+
+    //setter and getter of the class and year of the student
+    public String getClassAndYear() {
+        return classAndYear;
+    }
+
+    // Setter with password check
+    protected void setClassAndYear(String classAndYear, String inputPassword) {
+        if (this.password.equals(inputPassword)) {
+            this.classAndYear = classAndYear;
+            System.out.println("Class and year updated successfully.");
+        } else {
+            System.out.println("Wrong password. Cannot change class and year.");
+        }
+    }
+
+    //display, mkaing it easy for debugging
     @Override
     public String toString() {
-        return super.toString() + ", Students [totalWorkPoint = " + totalWorkPoint + "]";
+        return super.toString() + ", Students [classAndYear = " + classAndYear + ", totalWorkPoint = " + totalWorkPoint + "]";
     }
 
+    //display, user interface is better
     @Override
     public String displayUserInfo() {
-        return super.displayUserInfo() + ", totalWorkPoint = " + totalWorkPoint;
+        return super.displayUserInfo() + ", classAndYear = " + classAndYear + ", totalWorkPoint = " + totalWorkPoint;
     }
-
 
     @Override
     public boolean equals(Object obj) {

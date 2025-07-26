@@ -4,11 +4,10 @@ public class Teachers extends User{
 
     // Full constructor
     public Teachers(int userID, String email, String password, String username, String phoneNumber,
-            String institude, int score) {
+            String institude) {
         super(userID, email, password, username, phoneNumber, institude);
     
     }
-
 
     // Overloaded constructor
     public Teachers(String username, String password) {
@@ -21,13 +20,13 @@ public class Teachers extends User{
         System.out.println("Graded student " + student.getUsername() + " with score " + score);
     }
 
-
-
+    //
     @Override
     public String toString() {
         return super.toString() + ", Teacher";
     }
 
+    //
     @Override
     public String displayUserInfo() {
         return super.displayUserInfo() + " Teacher";

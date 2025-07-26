@@ -1,7 +1,10 @@
+package object1;
+
 public class ProductivitySystem {
     public static void main(String [] args){
-        Student s = new Student();
-        Teacher t = new Teacher();
-
+        Students s = new Students();
+        Teachers t = new Teachers();
+    
     }
+    
 }

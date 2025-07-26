@@ -8,6 +8,7 @@ public class Students extends User{
     public Students(int userID, String email, String password, String username, String phoneNumber,
             String institude, int totalWorkPoint) {
         super(userID, email, password, username, phoneNumber, institude);
+        this.setTotalWorkPoint(totalWorkPoint);
     }
 
     //overloaded constructor
@@ -15,9 +16,6 @@ public class Students extends User{
         super(password, username);
     }
 
-     public int getTotalWorkPoint() {
-        return totalWorkPoint;
-    }
 
     protected void setTotalWorkPoint(int totalWorkPoint) {
         if (totalWorkPoint < 0) {
@@ -37,8 +35,6 @@ public class Students extends User{
     public String displayUserInfo() {
         return super.displayUserInfo() + ", totalWorkPoint = " + totalWorkPoint;
     }
-
-
 
    
 }

@@ -32,6 +32,10 @@ public class Teachers extends User{
     public String displayUserInfo() {
         return super.displayUserInfo() + " Teacher";
     }
-    
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj); // using the equals method from User class to compare email, and reuse the logic from user class
+    }
     
 }

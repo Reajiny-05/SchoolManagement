@@ -36,6 +36,11 @@ public class Students extends User{
         return super.displayUserInfo() + ", totalWorkPoint = " + totalWorkPoint;
     }
 
-   
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj); // using the equals method from User class to compare email, and reuse the logic from user class
+    }
+    
 }
 

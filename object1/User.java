@@ -13,10 +13,10 @@ public class User {
     public User(int userID, String email, String password, String username, String phoneNumber,
             String institude) {
         this.userID = userID;
-        this.email = email;
-        this.password = password;
-        this.username = username;   
-        this.phoneNumber = phoneNumber;
+        this.setPhoneNumber(phoneNumber);
+        this.setEmail(email);
+        this.setPassword(password);
+        this.setUsername(username);
         this.institude = institude;
     }
 
@@ -43,6 +43,10 @@ public class User {
     }
 
     protected void setEmail(String email) {
+        if (email == null || !email.contains("@")) {
+            System.out.println("Invalid email format");
+            return;
+        }
         this.email = email;
     }
 
@@ -65,6 +69,10 @@ public class User {
     }
 
     protected void setUsername(String username) {
+        if (username == null || username.isEmpty()) {
+            System.out.println("Username cannot be empty");
+            return;
+        }
         this.username = username;
     }
 
@@ -73,6 +81,10 @@ public class User {
     }
 
     protected void setPhoneNumber(String phoneNumber) {
+        if (phoneNumber == null || !phoneNumber.matches("\\d{10}")) {
+            System.out.println("Invalid phone number format");
+            return;
+        }
         this.phoneNumber = phoneNumber;
     }
 
@@ -89,6 +101,13 @@ public class User {
         return "User [email=" + email + ", username=" + username + ", institude=" + institude + "]";
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        User user = (User) obj;
+        return email.equals(user.email); // to see if that person is the same person, where same email equal same person
+    }   
+
 
 }
-

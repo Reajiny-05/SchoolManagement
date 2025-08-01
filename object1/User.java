@@ -9,7 +9,7 @@ public class User {
     protected String phoneNumber;
     protected String institute;
 
-    private static int userCount = 0;  // static field to track all users
+    private static int userCount = 0;   // Static field to track how many users have been created
 
     // Constructor
     public User(int userID, String email, String password, String username, String phoneNumber,
@@ -40,7 +40,7 @@ public class User {
     public String displayUserInfo() {
         return "Email: " + email + "\n" +
                "Username: " + username + "\n" +
-               "Institude: " + institude;
+               "Institute: " + institute;
     }
 
     //simple login check
@@ -118,6 +118,8 @@ public class User {
     public String toString() {
         return "User [email=" + email + ", username=" + username + ", institude=" + institude + "]";
     }
+
+    // Compares two users by email to check if they're the same person
 
     @Override
     public boolean equals(Object obj) {

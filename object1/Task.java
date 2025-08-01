@@ -18,6 +18,7 @@ public class Task {
         this.progress = progress;
         this.deadline = deadline;
         this.importance_status = importance_status;
+        taskCount++;
     }
 
     //static method to return the number of tasks

@@ -7,24 +7,35 @@ public class User {
     protected String password;
     protected String username;
     protected String phoneNumber;
-    protected String institude;
+    protected String institute;
+
+    private static int userCount = 0;  // static field to track all users
 
     // Constructor
     public User(int userID, String email, String password, String username, String phoneNumber,
-            String institude) {
+            String institute) {
         this.userID = userID;
         this.setPhoneNumber(phoneNumber);
         this.setEmail(email);
         this.setPassword(password);
         this.setUsername(username);
-        this.institude = institude;
+        this.setInstitute(institute);
+        userCount++;
     }
 
     // Overloaded constructor
     public User(String password, String username) {
         this.password = password;
         this.username = username;
+        userCount++;
     }
+
+    // static method to get the number of created users
+
+    public static int getUserCount() {
+        return userCount;
+    }
+
 
     //display user information
     public String displayUserInfo() {
@@ -88,9 +99,17 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getInstitude() {
-        return institude;
+    public String getInstitute() {
+        return institute;
     }
+
+    protected void setInstitute(String institute) {
+    if (institute == null || institute.trim().isEmpty()) {
+        System.out.println("Institute cannot be empty");
+    } else {
+        this.institute = institute;
+    }
+}
 
     protected int getUserID() {
         return userID;

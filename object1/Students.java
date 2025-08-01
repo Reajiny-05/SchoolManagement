@@ -5,24 +5,28 @@ public class Students extends User{
     private int totalWorkPoint = 0;
     private String classAndYear = "";
 
-    //constructor taken from user (parent)
+    private static int studentCount = 0;
+
+
+
+    //full constructor taken from user (parent) 
     public Students(int userID, String email, String password, String username, String phoneNumber, String institude,
             int totalWorkPoint, String classAndYear) {
         super(userID, email, password, username, phoneNumber, institude);
-        this.totalWorkPoint = totalWorkPoint;
+        this.setTotalWorkPoint(totalWorkPoint);
         this.classAndYear = classAndYear;
+        studentCount++;
     }
 
-    //constructor for this class (subclass)
-    public Students(String password, String username, int totalWorkPoint, String classAndYear) {
-        super(password, username);
-        this.totalWorkPoint = totalWorkPoint;
-        this.classAndYear = classAndYear;
-    }
 
-    //overloaded constructor
+    //overloaded constructor when only username and password available (login)
     public Students(String password, String username) {
         super(password, username);
+        studentCount++;
+    }
+
+    public static int getStudentCount() {
+    return studentCount;
     }
 
     //setter and getter for total work point

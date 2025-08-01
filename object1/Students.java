@@ -5,8 +5,8 @@ public class Students extends User{
     private int totalWorkPoint = 0;
     private String classAndYear = "";
 
+    // Static counter to track number of student instances
     private static int studentCount = 0;
-
 
 
     //full constructor taken from user (parent) 
@@ -25,6 +25,7 @@ public class Students extends User{
         studentCount++;
     }
 
+    // Returns total number of Students created.
     public static int getStudentCount() {
     return studentCount;
     }
@@ -71,6 +72,8 @@ public class Students extends User{
         return super.displayUserInfo() + ", classAndYear = " + classAndYear + ", totalWorkPoint = " + totalWorkPoint;
     }
 
+
+     
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj); // using the equals method from User class to compare email, and reuse the logic from user class

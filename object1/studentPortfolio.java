@@ -9,13 +9,13 @@ public class studentPortfolio {
     protected int portfolioID;
     protected String portfolioName;
     private String skills;
-    private String password; 
+    private String password;     // Password used to control access to skill 
 
     //constructor
     public studentPortfolio(String portfolioName, String skills, String password) {
         this.portfolioName = portfolioName;
         this.skills = skills;
-        setPassword(password);
+        setPassword(password);  // use setter to validate password
     }
 
     // overload constructor
@@ -52,7 +52,8 @@ public class studentPortfolio {
         this.portfolioName = portfolioName;
     }
 
-        protected void setSkills(String newSkills, String inputPassword) {
+    // set password for updating the skill
+    protected void setSkills(String newSkills, String inputPassword) {
         if (!checkPassword(inputPassword)) {
             System.out.println("Access denied: Incorrect password. Skills not updated.");
             return;

@@ -13,9 +13,9 @@ public class Task {
     //contructor 
     public Task(int taskID, String taskName, int score, String progress, Date deadline) {
         this.taskID = taskID;
-        setTaskName(taskName);
-        setScore(score);
-        setProgress(progress);
+        setTaskName(taskName);      // using setter with validation
+        setScore(score);            // only teacher calls this
+        setProgress(progress);       // student can call with condition
         this.deadline = String.valueOf(deadline);
         taskCount++;
     }
@@ -42,13 +42,14 @@ public class Task {
     public int getScore() {
         return score;
     }
-
+    
+     // Protected setter: only Teachers can set this in the same package
     protected void setScore(int score) {
         if (score >= 0 && score <= 10) {
             this.score = score;
         }
         else {
-            System.outprintln("Score must be between 0 and 10.");
+            System.out.println("Score must be between 0 and 10.");
         }
     }
 

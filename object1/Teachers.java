@@ -1,15 +1,15 @@
 package object1;
 
 public class Teachers extends User{
-    private String course = "";
+    private String course = "";     // subject/course the teacher teaches
 
-    private static int teacherCount = 0;
+    private static int teacherCount = 0;    // Static counter to track number of teacher 
 
     //full constructor
     public Teachers(int userID, String email, String password, String username, String phoneNumber, String institude,
             String course) {
         super(userID, email, password, username, phoneNumber, institude);
-        this.setCourse(course);
+        this.setCourse(course);   // Use setter for validation
         teacherCount++;
     }
 
@@ -43,7 +43,7 @@ public class Teachers extends User{
         System.out.println("Graded student " + student.getUsername() + " with score " + score);
     }
 
-    //
+    // toString method for easier debugging — includes teacher-specific data.
     @Override
     public String toString() {
         return super.toString() + ", Teacher [course = " + course + "]";

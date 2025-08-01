@@ -3,30 +3,33 @@ package object1;
 public class Teachers extends User{
     private String course = "";
 
+    private static int teacherCount = 0;
+
     //full constructor
     public Teachers(int userID, String email, String password, String username, String phoneNumber, String institude,
             String course) {
         super(userID, email, password, username, phoneNumber, institude);
-        this.course = course;
+        this.setCourse(course);
+        teacherCount++;
     }
 
-    //constructor
-    public Teachers(String password, String username, String course) {
-        super(password, username);
-        this.course = course;
-    }
 
     // Overloaded constructor
     public Teachers(String username, String password) {
         super(username, password);
+        teacherCount++;
+    }
+
+    public static int getTeacherCount() {
+    return teacherCount;
     }
 
     //setter and getter
-    public String getcourse() {
+    public String getCourse() {
         return course;
     }
 
-    protected void setcourse(String course) {
+    protected void setCourse(String course) {
         if (course != null && !course.trim().isEmpty()) {
             this.course = course;
         } else {

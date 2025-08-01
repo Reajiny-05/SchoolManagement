@@ -7,16 +7,18 @@ public class User {
     protected String password;
     protected String username;
     protected String phoneNumber;
-    protected String institude;
+    protected String institute;
+
+    private static int userCount = 0;  // static field to track all users
 
     // Constructor
     public User(int userID, String email, String password, String username, String phoneNumber,
-            String institude) {
+            String institute) {
         this.userID = userID;
-        this.setPhoneNumber(phoneNumber);
-        this.setEmail(email);
-        this.setPassword(password);
-        this.setUsername(username);
+        this.email = email;
+        this.password = password;
+        this.username = username;   
+        this.phoneNumber = phoneNumber;
         this.institude = institude;
     }
 
@@ -24,7 +26,15 @@ public class User {
     public User(String password, String username) {
         this.password = password;
         this.username = username;
+        userCount++;
     }
+
+    // static method to get the number of created users
+
+    public static int getUserCount() {
+        return userCount;
+    }
+
 
     //display user information
     public String displayUserInfo() {
@@ -50,7 +60,7 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
+    protected String getPassword() {
         return password;
     }
 
@@ -76,7 +86,7 @@ public class User {
         this.username = username;
     }
 
-    public String getPhoneNumber() {
+    protected String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -88,9 +98,17 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getInstitude() {
-        return institude;
+    public String getInstitute() {
+        return institute;
     }
+
+    protected void setInstitute(String institute) {
+    if (institute == null || institute.trim().isEmpty()) {
+        System.out.println("Institute cannot be empty");
+    } else {
+        this.institute = institute;
+    }
+}
 
     protected int getUserID() {
         return userID;
@@ -109,6 +127,13 @@ public class User {
         return email.equals(user.email); // to see if that person is the same person, where same email equal same person
     }   
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        User user = (User) obj;
+        return email.equals(user.email); // to see if that person is the same person, where same email equal same person
+    }   
+
 
 }
-

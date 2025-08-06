@@ -17,6 +17,13 @@ public class Students extends User{
         this.classAndYear = classAndYear;
         studentCount++;
     }
+    // Constructor used during sign-up (email, username, password only)
+    // Assigns default values to phoneNumber and institute
+    public Students(String username, String password, String email) {
+    super(0, email, password, username, "0123456789", "Default Institute");
+
+    studentCount++;   // Increase student count
+    }
 
 
     //overloaded constructor when only username and password available (login)
@@ -72,7 +79,6 @@ public class Students extends User{
         return super.displayUserInfo() + ", classAndYear = " + classAndYear + ", totalWorkPoint = " + totalWorkPoint;
     }
 
-
      
     @Override
     public boolean equals(Object obj) {
@@ -80,9 +86,5 @@ public class Students extends User{
     }
     
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj); // using the equals method from User class to compare email, and reuse the logic from user class
-    }
     
 }

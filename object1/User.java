@@ -116,7 +116,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [email=" + email + ", username=" + username + ", institude=" + institude + "]";
+        return "User [email=" + email + ", username=" + username + ", institute=" + institute + "]";
     }
 
     // Compares two users by email to check if they're the same person
@@ -129,13 +129,7 @@ public class User {
         return email.equals(user.email); // to see if that person is the same person, where same email equal same person
     }   
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        User user = (User) obj;
-        return email.equals(user.email); // to see if that person is the same person, where same email equal same person
-    }   
+
 
 
 }

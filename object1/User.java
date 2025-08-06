@@ -19,7 +19,7 @@ public class User {
         this.password = password;
         this.username = username;   
         this.phoneNumber = phoneNumber;
-        this.institude = institude;
+        this.institute = institute;
     }
 
     // Overloaded constructor

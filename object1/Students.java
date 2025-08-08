@@ -1,5 +1,7 @@
 package object1;
 
+import java.sql.Date;
+import java.util.TreeMap;
 
 public class Students extends User{
     private int totalWorkPoint = 0;
@@ -17,6 +19,8 @@ public class Students extends User{
         this.classAndYear = classAndYear;
         studentCount++;
     }
+
+    
     // Constructor used during sign-up (email, username, password only)
     // Assigns default values to phoneNumber and institute
     public Students(String username, String password, String email) {
@@ -66,6 +70,22 @@ public class Students extends User{
             System.out.println("Wrong password. Cannot change class and year.");
         }
     }
+
+    // collection
+    private TreeMap<Date, Task> taskMap = new TreeMap<>();
+
+    public void addTask(Task task) {
+        taskMap.put(task.getDeadline(), task);
+    }
+
+    public void displayAllTasksSorted() {
+        for (Task t : taskMap.values()) {
+            System.out.println(t);
+        }
+    }
+
+
+
 
     //display, mkaing it easy for debugging
     @Override

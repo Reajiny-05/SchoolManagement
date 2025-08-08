@@ -1,10 +1,11 @@
 package object1;
 import java.sql.Date;
 
+
 public class Task {
     private int taskID;
     private String taskName;
-    private String deadline;
+    private Date deadline;
     private int score;
     private String progress;
 
@@ -16,7 +17,7 @@ public class Task {
         setTaskName(taskName);      // using setter with validation
         setScore(score);            // only teacher calls this
         setProgress(progress);       // student can call with condition
-        this.deadline = String.valueOf(deadline);
+        this.deadline = deadline;
         taskCount++;
     }
 
@@ -37,6 +38,10 @@ public class Task {
         else {
             System.out.println("Task name cannot be empty.");
         }
+    }
+
+    public Date getDeadline() {
+        return deadline;
     }
 
     public int getScore() {

@@ -7,12 +7,12 @@ import object1.studentPortfolio;
 public class ProductivitySystem {
     public static void main(String[] args) {
         // Create student and teacher
-        Students s1 = new Students("katty", "12345", "katty@dg.com");
+        Students s1 = new Students("katty", "12345", "katty@gmail.com");
         Teachers t1 = new Teachers("chanty", "abcde");
 
         // Create and assign tasks
-        Task task1 = new Task(1, "Research", 0, "start", Date.valueOf("2025-10-01"));
-        Task task2 = new Task(2, "Presentation", 0, "start", Date.valueOf("2025-09-28"));
+        Task task1 = new Task(1, "Java course", 0, "start", Date.valueOf("2025-10-01"));
+        Task task2 = new Task(2, "Database", 0, "start", Date.valueOf("2025-09-28"));
         s1.addTask(task1);
         s1.addTask(task2);
 
@@ -31,7 +31,7 @@ public class ProductivitySystem {
         s1.displayAllTasksSorted();
 
         // Create and add portfolio
-        studentPortfolio p1 = new studentPortfolio("Java Portfolio", "OOP, JDBC, Threads", "abc123");
+        studentPortfolio p1 = new studentPortfolio("Java Portfolio", "OOP, java, photoshop", "abc123");
         s1.addPortfolio(p1);
 
         // Show portfolio list

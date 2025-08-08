@@ -112,6 +112,12 @@ public abstract class User implements Authentication{
         return userID;
 
     }
+
+        /**
+    * Login method implementation from Authentication interface.
+    * Compares the input username and password with the stored values.
+    * Returns true if both match exactly, otherwise false.
+    */
     @Override
     public boolean login(String username, String password) {
         return this.username.equals(username) && this.password.equals(password);

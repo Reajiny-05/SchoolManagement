@@ -7,7 +7,7 @@ import object1.studentPortfolio;
 public class ProductivitySystem {
     public static void main(String[] args) {
         // Create student and teacher
-        Students s1 = new Students("sopheap", "12345", "sopheap@dg.com");
+        Students s1 = new Students("katty", "12345", "katty@dg.com");
         Teachers t1 = new Teachers("chanty", "abcde");
 
         // Create and assign tasks

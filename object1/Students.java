@@ -1,8 +1,8 @@
 package object1;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.Date;
 import java.util.TreeMap;
 
 public class Students extends User{
@@ -127,5 +127,9 @@ public class Students extends User{
     }
     
     
-    
+    @Override
+    public String getRole() {
+        return "Student";
+    }
+
 }

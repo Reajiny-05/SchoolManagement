@@ -44,6 +44,18 @@ public class Task {
         return deadline;
     }
 
+
+    // setDeadline to update the deadline later on
+    protected void setDeadline(Date deadline) {
+        if (deadline != null) {
+            this.deadline = deadline;
+        }   
+        else {
+            System.out.println("Deadline cannot be null.");
+        }
+    }
+
+
     public int getScore() {
         return score;
     }

@@ -15,6 +15,7 @@ public class studentPortfolio {
     public studentPortfolio(String portfolioName, String skills, String password) {
         this.portfolioName = portfolioName;
         this.skills = skills;
+        this.password = password;
     }
 
         //setter and getter
@@ -26,6 +27,7 @@ public class studentPortfolio {
         return skills;
     }
 
+    // set portfolio name
     protected void setPortfolioName(String portfolioName) {
         this.portfolioName = portfolioName;
     }
@@ -35,6 +37,7 @@ public class studentPortfolio {
         if (!checkPassword(inputPassword)) {
             System.out.println("Access denied: Incorrect password. Skills not updated.");
             return;
+
         }
 
         if (newSkills == null || newSkills.trim().isEmpty()) {
@@ -42,24 +45,22 @@ public class studentPortfolio {
         } else {
             this.skills = newSkills.trim();
         }
-    
-    }
-        protected void setSkills(String newSkills, String inputPassword) {
-        if (!checkPassword(inputPassword)) {
-            System.out.println("Access denied: Incorrect password. Skills not updated.");
-            return;
-        }
-
-        if (newSkills == null || newSkills.trim().isEmpty()) {
-            this.skills = "No skills provided";
-        } else {
-            this.skills = newSkills.trim();
-        }
-    
-    }
-    
-    
 
     
+    }
+
+    // check is the given password matches the saved password
+    private boolean checkPassword(String inputPassword) {
+        return this.password != null && this.password.equals(inputPassword);
     
+    }
+
+    // method to display portfolio information
+    public String displayPortfolioInfo() {
+        return "Portfolio Name: " + portfolioName + "\n"
+             + "Skills: " + skills + "\n";
+    }
+
+
+
 }

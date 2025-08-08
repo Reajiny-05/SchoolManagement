@@ -1,5 +1,7 @@
 package object1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.sql.Date;
 import java.util.TreeMap;
 
@@ -72,6 +74,7 @@ public class Students extends User{
     }
 
     // collection
+    // method to add task by sorted deadline
     private TreeMap<Date, Task> taskMap = new TreeMap<>();
 
     public void addTask(Task task) {
@@ -84,7 +87,25 @@ public class Students extends User{
         }
     }
 
+    // method to add portfolio
+    private List<studentPortfolio> portfolioList = new ArrayList<>();
 
+    public void addPortfolio(studentPortfolio portfolio) {
+        portfolioList.add(portfolio);
+    }
+
+    // method to display Portfolio
+    public void displayAllPortfolios() {
+        if (portfolioList.isEmpty()) {
+            System.out.println("No portfolios added yet.");
+            return;
+    }
+
+        System.out.println("Portfolios of " + this.getUsername() + ":");
+    for (studentPortfolio p : portfolioList) {
+        System.out.println(p.displayPortfolioInfo());
+        }
+    }
 
 
     //display, mkaing it easy for debugging
@@ -105,6 +126,6 @@ public class Students extends User{
         return super.equals(obj); // using the equals method from User class to compare email, and reuse the logic from user class
     }
     
-
+    
     
 }

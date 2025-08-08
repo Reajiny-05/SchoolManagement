@@ -1,6 +1,8 @@
 package object1;
 
-public class User {
+import authenticationInterface.Authentication;
+
+public abstract class User implements Authentication{
 
     protected int userID;
     protected String email;
@@ -43,10 +45,6 @@ public class User {
                "Institute: " + institute;
     }
 
-    //simple login check
-    public boolean login(String username, String password) {
-        return this.username.equals(username) && this.password.equals(password);
-    }
 
     public String getEmail() {
         return email;
@@ -112,7 +110,14 @@ public class User {
 
     protected int getUserID() {
         return userID;
+
     }
+    @Override
+    public boolean login(String username, String password) {
+        return this.username.equals(username) && this.password.equals(password);
+    }
+
+
 
     @Override
     public String toString() {
@@ -129,6 +134,7 @@ public class User {
         return email.equals(user.email); // to see if that person is the same person, where same email equal same person
     }   
 
+    public abstract String getRole();  // abstract method
 
 
 

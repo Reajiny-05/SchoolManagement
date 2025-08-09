@@ -1,4 +1,4 @@
-package object1;
+package object;
 
 import authenticationInterface.Authentication;
 

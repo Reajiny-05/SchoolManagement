@@ -1,4 +1,4 @@
-package object1;
+package object;
 
 public class Teachers extends User{
     private String course = "";     // subject/course the teacher teaches
